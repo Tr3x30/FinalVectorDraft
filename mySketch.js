@@ -15,7 +15,9 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth * 0.999, windowHeight * 0.999);
+    let cnv = createCanvas(windowWidth, windowHeight);
+    cnv.position(0, 0);
+
     angleMode(DEGREES);
     offset = createVector(0, 0);
     setupUI();
