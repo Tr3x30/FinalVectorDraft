@@ -34,6 +34,8 @@ function draw() {
 
     DrawBackground.init();
     displayMousePositionPopup();
+
+    plotVectors();
 }
 
 // ---------------- UI Setup ----------------
@@ -52,14 +54,6 @@ function setupUI() {
     vectorButton = createButton('Enter Vectors');
     vectorButton.position(width / 154, height / 9);
     vectorButton.mousePressed(promptForVectors);
-}
-
-// ---------------- Core Functions ----------------
-
-function plotVectors() {
-    vectors.forEach(vector => {
-        VectorRenderer.draw(vector, offset, adjustment, isDarkMode);
-    });
 }
 
 // ---------------- Helper Functions ----------------

@@ -31,7 +31,7 @@ function promptForVectors() {
     });
 
     let resultantData = VectorMath.calculateResultant(vectors);
-    let resultantVector = new VectorObject("", resultantData.magnitude, resultantData.direction);
+    let resultantVector = new VectorObject("Resultant", resultantData.magnitude, resultantData.direction);
 
     vectors.push(resultantVector);
     console.log(`Resultant Vector: ${resultantData.magnitude}m [${resultantData.direction}]`);
